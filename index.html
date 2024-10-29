@@ -47,14 +47,37 @@
             opacity: 0.2;
         }
 
-        /* Message Animation */
+        /* Hidden Message Section */
         .message {
             font-size: 1.2em;
             margin-top: 40px;
             color: #fff;
-            animation: slideUp 4s ease-in-out;
-            animation-delay: 2s;
             opacity: 0;
+            transform: translateY(100px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .message.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Button Styling */
+        .open-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff6b6b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease;
+        }
+
+        .open-btn:hover {
+            background-color: #ff8b8b;
         }
 
         /* Floating Heart Style */
@@ -78,11 +101,6 @@
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
-
-        @keyframes slideUp {
-            0% { opacity: 0; transform: translateY(50px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
     </style>
 </head>
 <body>
@@ -94,10 +112,23 @@
     <div class="heart heart2">💖</div>
     <div class="heart heart3">💖</div>
 
-    <div class="message">
-        I know words aren't enough, but I'm here, and I want to make things right. <br>
-        You mean so much to me, and I can't bear seeing you unhappy. <br><br>
-        Please forgive me. Let's move forward, together. 💞
+    <!-- Button to Reveal the Message -->
+    <button class="open-btn" onclick="showMessage()">Open Message</button>
+
+    <!-- Apology Message Section -->
+    <div class="message" id="apologyMessage">
+        Dekh Yaar Mujhe pata hai ke Words Enough nhi hai And I just Want ke koi sath rhe ya nhi but tu reh cause tu yaar mere se itne Frank hai itne Adore way me baat krti meko Pyar kese nhi hota! <br>
+        And I'm Really Really Really Sorry Tu Jo sajja de manzur hai Bas Meko maaf krde Please 🥲<br>
+        And I Promise Next time se asa kuch nhi hoga Aur Many Many Many Happy Returns of The Day Pookie Swastii...<br>
+        Dekh Ab Toh maaf krde Tu bhot sweet hai And I know Tu meko maaf krdegi but Please krde Vaii 🥺<br>
+        RIZZ Maru?? Chal mar hi deta Love You 2 Hopefully Tune maaf Kiya
     </div>
+
+    <script>
+        function showMessage() {
+            const message = document.getElementById("apologyMessage");
+            message.classList.add("visible");
+        }
+    </script>
 </body>
 </html>
