@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry</title>
+    <style>
+        /* Background Animation */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(120deg, #ff9a9e, #fad0c4, #ffdde1);
+            background-size: 200% 200%;
+            animation: gradient 10s ease infinite;
+        }
+
+        /* Main Text Animation */
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin-top: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 3s ease-in-out;
+            animation-delay: 1s;
+        }
+
+        /* Floating Heart Animation */
+        .heart {
+            position: absolute;
+            font-size: 5em;
+            color: #ff6b6b;
+            animation: pulse 1.5s infinite;
+            opacity: 0.2;
+        }
+
+        /* Message Animation */
+        .message {
+            font-size: 1.2em;
+            margin-top: 40px;
+            color: #fff;
+            animation: slideUp 4s ease-in-out;
+            animation-delay: 2s;
+            opacity: 0;
+        }
+
+        /* Floating Heart Style */
+        .heart1 { top: 20%; left: 25%; animation-delay: 0s; }
+        .heart2 { top: 40%; left: 70%; animation-delay: 1s; }
+        .heart3 { top: 65%; left: 35%; animation-delay: 2s; }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes slideUp {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <h1>I'm Sorry, Swastiiii 💗</h1>
+    <p>For the times I made you feel hurt, I'm truly sorry.</p>
+    
+    <!-- Floating Hearts -->
+    <div class="heart heart1">💖</div>
+    <div class="heart heart2">💖</div>
+    <div class="heart heart3">💖</div>
+
+    <div class="message">
+        I know words aren't enough, but I'm here, and I want to make things right. <br>
+        You mean so much to me, and I can't bear seeing you unhappy. <br><br>
+        Please forgive me. Let's move forward, together. 💞
+    </div>
+</body>
+</html>
